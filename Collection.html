@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Uncharted Wiki</title>
+
+    <link rel="stylesheet" href="Styles/article.css">
+</head>
+
+<body>
+    <header>
+        <div class="img"><a href="index.html"><img src="Images/Logo.jpeg" alt="Logo" id="logo"></a></div>
+        <div class="title">
+            <h1>Uncharted <br>Wiki</h1>
+        </div>
+        <div class="login">
+            <a href="Login%20register.html">Login/Register</a>
+        </div>
+    </header>
+
+    <section class="navbar">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="News.html">News</a>
+            <a href="404Page.html">Wiki</a>
+            <a href="404Page.html">Tutorials</a>
+        </nav>
+    </section>
+
+    <main class="row">
+        <img src="Images/Collection.jpg" alt="Collection">
+        <h1>New Collection</h1>
+        <p>
+            Following its official announcement in September, Naughty Dog has now listed ‘Uncharted: Legacy of Thieves Collection’ on Steam. The package includes the two latest games in the series – Uncharted 4 and Uncharted: The Lost Legacy.
+            <br><br>
+            The store page does not reveal much about the collection, except for its 2022 release window, which remains the same as before. Unlike its PlayStation 5 version, which is being developed by Naughty Dog themselves, its PC port will be developed by Iron Galaxy Studios. The team had previously ported games such as ‘The Elder Scrolls V: Skyrim’ for the Nintendo Switch and the PS exclusive, ‘Crash Bandicoot’ to Steam.
+            <br><br>
+            Currently, there is no official listing for the game’s system requirements. But, going by previous PlayStation releases, we could expect a seamless 4K 60FPS experience, support for ultrawide monitors, an enhanced photo mode, and uncapped frame rates (on lower resolutions).
+            <br><br>
+            The page also details various language options, full controller support, and Steam achievements. The collection recently got rated by the ESRB for “Teen,” indicating that a release date and pricing details could be on their way in the coming weeks. Probably during The Game Awards 2021.
+            <br><br>
+            Developed by Naughty Dog, ‘Uncharted 4: A Thief’s End’ follows the adventures of the iconic treasure hunter, Nathan Drake as he reunites with his long-lost brother Samuel in the deep forests of Madagascar. In ‘The Lost Legacy,’ however, players take control of Chloe Frazer to find the Tusk of Ganesh in the Western Ghats mountain ranges of India. The game serves as a standalone expansion and a follow-up to the events in Uncharted 4. Both of these games feature third-person action elements with lots of exploration and combat mechanics.
+            <br><br>
+            Uncharted: Legacy of Thieves Collection is set to release sometime in 2022 on the PlayStation 5 and Windows PC via Steam and Epic Games Store.
+        </p>
+    </main>
+
+    <footer>
+        <a href="index.html">Home</a>
+        <a href="404Page.html">Support</a>
+        <a href="404Page.html">About</a>
+        <a href="404Page.html">Contact Us</a>
+    </footer>
+
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm">
+        <form class="form-container">
+            <h1>Chat</h1>
+
+            <label for="msg"><b>Message</b></label>
+            <textarea disabled>Unfortunately our help service is currently closed, we hope to get back to helping you soon!</textarea>
+
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script>
+        var countDownDate = new Date("Feb 18, 2022 12:00:00").getTime();
+
+        var x = setInterval(function() {
+
+            var now = new Date().getTime();
+
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+    </script>
+
+</body>
+
+</html>
