@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Uncharted Wiki</title>
+
+    <link rel="stylesheet" href="Styles/article.css">
+</head>
+
+<body>
+    <header>
+        <div class="img"><a href="index.html"><img src="Images/Logo.jpeg" alt="Logo" id="logo"></a></div>
+        <div class="title">
+            <h1>Uncharted <br>Wiki</h1>
+        </div>
+        <div class="login">
+            <a href="Login%20register.html">Login/Register</a>
+        </div>
+    </header>
+
+    <section class="navbar">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="News.html">News</a>
+            <a href="404Page.html">Wiki</a>
+            <a href="404Page.html">Tutorials</a>
+        </nav>
+    </section>
+
+    <main class="row">
+        <img src="Images/Duo.jpeg" alt="Duo">
+        <h1>Lost Legacy</h1>
+        <p>
+            Uncharted 4 was a big deal. It was the end for a hero we’d spent nearly a decade with and, 15 months ago, we got to finally share the conclusion of Nathan Drake’s story with the world. It was amazing to see the reception of Nate’s last adventure, and it made all the team’s effort worth it. Then (after a much needed break), we came back to the studio to think about the seemingly unthinkable: Could we make an Uncharted without Nathan Drake?
+            <br><br>
+            To us, Uncharted has always been about the ensemble. Over the years, we’ve spent time with many colorful allies and adversaries, each with their own quirks and personalities. We love that everyone at the studio has their own favorite Uncharted character, so we saw this new project as an opportunity to take characters we love and shine a spotlight on them, to really give them the full Uncharted treatment. At Naughty Dog, we don’t embark on a project unless we think we have a story worth telling and new challenges to tackle. With Chloe Frazer and Nadine Ross, we knew we had something special, and the team was on board to dip in for one more helping of adventure.
+            <br><br>
+            Today, just over a year later, you can get your hands on Uncharted: The Lost Legacy--the result of hundreds of the most incredibly talented and passionate individuals in the industry pouring just as much of their heart into Chloe’s journey as any of Nathan’s past. We knew this adventure through the Western Ghats of India was an ambitious one: chock full of touching moments, incredible vistas, daring escapes, and epic blockbuster sequences. Somehow, the team has pulled it off again and the result is truly stunning. It’s a humbling reminder that with the right team, even the unthinkable is possible.
+            <br><br>
+            We at Naughty Dog thank your continued support that allows us to make the games we love, with the characters we adore. We couldn’t be more proud of this game, and we hope you have room in your heart for another Uncharted hero.
+        </p>
+    </main>
+
+    <footer>
+        <a href="index.html">Home</a>
+        <a href="404Page.html">Support</a>
+        <a href="404Page.html">About</a>
+        <a href="404Page.html">Contact Us</a>
+    </footer>
+
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm">
+        <form class="form-container">
+            <h1>Chat</h1>
+
+            <label for="msg"><b>Message</b></label>
+            <textarea disabled>Unfortunately our help service is currently closed, we hope to get back to helping you soon!</textarea>
+
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script>
+        var countDownDate = new Date("Feb 18, 2022 12:00:00").getTime();
+
+        var x = setInterval(function() {
+
+            var now = new Date().getTime();
+
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+    </script>
+
+</body>
+
+</html>
