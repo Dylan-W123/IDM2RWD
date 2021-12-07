@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Uncharted Wiki</title>
+
+    <link rel="stylesheet" href="Styles/article.css">
+</head>
+
+<body>
+    <header>
+        <div class="img"><a href="index.html"><img src="Images/Logo.jpeg" alt="Logo" id="logo"></a></div>
+        <div class="title">
+            <h1>Uncharted <br>Wiki</h1>
+        </div>
+        <div class="login">
+            <a href="Login%20register.html">Login/Register</a>
+        </div>
+    </header>
+
+    <section class="navbar">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="News.html">News</a>
+            <a href="404Page.html">Wiki</a>
+            <a href="404Page.html">Tutorials</a>
+        </nav>
+    </section>
+
+    <main class="row">
+        <img src="Images/Movie.jpg" alt="Nathan">
+        <h1>The Upcoming Movie</h1>
+        <p>
+            This is a pretty epic day for us at Naughty Dog. It’s been almost fourteen years since our team first brought you the bombastic, jaw dropping, globe-trotting adventures with Nathan Drake, Chloe Frazer and all the lovable characters that have come to make up the franchise – Sully, Sam, Elena, Nadine and beyond!
+            <br><br>
+            UNCHARTED has had huge impact, not only on the people that created it, but to millions of worldwide fans, becoming one of PlayStation’s most enjoyed franchises - spanning four stand-alone titles as well as a spinoff starring Chloe Frazer with The Lost Legacy as well!
+            <br><br>
+            Today, we’re humbled and incredibly excited to show you the world premiere of the first official trailer for the much-anticipated UNCHARTED movie – starring Tom Holland, Mark Wahlberg and Antonio Banderas. In a collaboration between Sony Pictures Entertainment, PlayStation Productions, and Naughty Dog we captured the spirit, spectacle, and heart that UNCHARTED is known for (some of you will recognize some of the humor, landmarks, music, and relics.)
+            <br><br>
+            In discussions with the film’s director, Ruben Fleischer, he shared that he “made the movie for both hardcore fans of the game and those who are not yet familiar with the franchise and believe that both will be equally entertained by this incredibly fun and action-packed film."
+            <br><br>
+            It’s going to be an epic, emotional ride for new and old fans as we watch Nathan Drake make his big screen debut! Sic Parvis Magna indeed!
+            <br><br>
+            Without any further delay, presenting the UNCHARTED movie trailer.
+        </p>
+
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/UZOnOfc83Q0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </main>
+
+    <footer>
+        <a href="index.html">Home</a>
+        <a href="404Page.html">Support</a>
+        <a href="404Page.html">About</a>
+        <a href="404Page.html">Contact Us</a>
+    </footer>
+
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm">
+        <form class="form-container">
+            <h1>Chat</h1>
+
+            <label for="msg"><b>Message</b></label>
+            <textarea disabled>Unfortunately our help service is currently closed, we hope to get back to helping you soon!</textarea>
+
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script>
+        var countDownDate = new Date("Feb 18, 2022 12:00:00").getTime();
+
+        var x = setInterval(function() {
+
+            var now = new Date().getTime();
+
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+</body></html>
