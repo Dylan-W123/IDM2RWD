@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Uncharted Wiki</title>
+
+    <link rel="stylesheet" href="Styles/login.css">
+</head>
+
+<body>
+    <header>
+        <div class="img"><a href="Home%20Page.html"><img src="Images/Logo.jpeg" alt="Logo" id="logo"></a></div>
+        <div class="title">
+            <h1>Uncharted Wiki</h1>
+        </div>
+    </header>
+
+    <main class="row">
+        <div>
+            <form name="login" action="Home page.html" onsubmit="return validateForm()" class="login">
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <span id="uname_error">*</span>
+                    <input type="text" placeholder="Enter Username" name="uname">
+                    <br>
+                    <label for="psw"><b>Password</b></label>
+                    <span id="psw_error">*</span>
+                    <input type="password" placeholder="Enter Password" name="psw">
+                    <br>
+                    <button type="submit" id="submit_form">Login</button>
+                    <br>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                    <p>Forgot <a href="#">password?</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div>
+            <form name="signup" action="Home page.html" onsubmit="return validateForm1()" class="signup" id="form2">
+                <div class="container">
+                    <label for="uname1"><b>Username</b></label>
+                    <span id="uname1_error">*</span>
+                    <input type="text" placeholder="Enter Username" name="uname1">
+                    <br>
+                    <label for="email"><b>Email</b></label>
+                    <span id="email_error">*</span>
+                    <input type="email" placeholder="Enter Email" name="email">
+                    <br>
+                    <label for="psw1"><b>Password</b></label>
+                    <span id="psw1_error">*</span>
+                    <input type="password" placeholder="Enter Password" name="psw1">
+                    <br>
+                    <label for="pswRepeat"><b>Re-enter Password</b></label>
+                    <span id="pswRepeat_error">*</span>
+                    <input type="password" placeholder="Re-enter Password" name="pswRepeat">
+                    <br>
+                    <button type="submit" id="submit_form">Register</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <a href="Home%20Page.html">Home</a>
+        <a href="#support">Support</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact Us</a>
+    </footer>
+
+    <script>
+        function validateForm() {
+            let x = document.forms["login"]["uname"].value;
+            if (x == "") {
+                document.getElementById("uname_error").innerHTML = "Username Required!";
+                return false;
+            } else {
+                document.getElementById("uname_error").innerHTML = "*";
+            }
+
+            let y = document.forms["login"]["psw"].value;
+            if (y == "") {
+                document.getElementById("psw_error").innerHTML = "Password Required!";
+                return false;
+            } else {
+                document.getElementById("psw_error").innerHTML = "*";
+            }
+        }
+    </script>
+
+    <script>
+        function validateForm1() {
+            let x = document.forms["signup"]["uname1"].value;
+            if (x == "") {
+                document.getElementById("uname1_error").innerHTML = "Username Required!";
+                return false;
+            } else {
+                document.getElementById("uname1_error").innerHTML = "*";
+            }
+            
+            let z = document.forms["signup"]["email"].value;
+            if (z == "") {
+                document.getElementById("email_error").innerHTML = "Email Required!";
+                return false;
+            } else {
+                document.getElementById("email_error").innerHTML = "*";
+            }
+
+            let y = document.forms["signup"]["psw1"].value;
+            if (y == "") {
+                document.getElementById("psw1_error").innerHTML = "Password Required!";
+                return false;
+            } else {
+                document.getElementById("psw1_error").innerHTML = "*";
+            }
+            
+            let a = document.forms["signup"]["pswRepeat"].value;
+            if (a == "") {
+                document.getElementById("pswRepeat_error").innerHTML = "Password Required!";
+                return false;
+            } else {
+                document.getElementById("pswRepeat_error").innerHTML = "*";
+            }
+            
+            if (a != y) {
+                document.getElementById("pswRepeat_error").innerHTML = "Password not the same!";
+                return false;
+            } else {
+                document.getElementById("pswRepeat_error").innerHTML = "*";
+            }
+        }
+    </script>
+
+</body></html>
