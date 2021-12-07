@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+header {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: darkgoldenrod;
+    color: white;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.login {
+    overflow: hidden;
+    flex: 15%;
+}
+
+.login a {
+    border: 1px solid black;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: 1vw 2vw;
+    text-decoration: none;
+    float: right;
+    font-size: 30px;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+
+.login a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#time {
+    clear: right;
+    float: right;
+    margin-right: 10%;
+    margin-bottom: 1%;
+    font-size: 25px;
+    text-align: center;
+    font-size: 2.4vh;
+}
+
+#demo {
+    clear: right;
+    float: right;
+    margin-right: 10%;
+    margin-top: 1%;
+    font-size: 2.5vh;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5vw;
+    flex: 10%;
+    text-align: center;
+    color: black;
+}
+
+.img {
+    flex: 15%;
+}
+
+.img img {
+    padding: 1px 10px;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    background-color: #333;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    float: left;
+    display: inline-block;
+    font-size: 25px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side {
+    flex: 10%;
+    padding: 10px 20px;
+    background-color: bisque;
+}
+
+.main {
+    flex: 50%;
+    padding: 10px 3%;
+    font-size: 30px;
+    background-color: aliceblue;
+}
+
+.main h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.main a {
+    font-size: 40px;
+    text-align: center;
+}
+
+.main img {
+    width: 27%;
+    float: left;
+    flex-wrap: wrap;
+}
+
+.side2 {
+    flex: 10%;
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+    background-color: bisque;
+}
+
+.side2 img {
+    width: 75%;
+}
+
+footer {
+    padding: 10px;
+    background: #ddd;
+    text-align: center;
+}
+
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+.form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+}
+
+.form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.form-container .cancel {
+    background-color: red;
+}
+
+.form-container .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+
+    .main {
+        flex: 70%
+    }
+
+    .side2 {
+        display: inline-flex;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .row,
+    .navbar {
+        flex-direction: row;
+    }
+
+    .row {
+        flex-flow: column;
+    }
+
+    .side2 {
+        display: inline-flex;
+    }
+
+    .side {
+        display: none;
+    }
+
+    .title {
+        font-size: 110%;
+    }
+
+    #time,
+    #demo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .login a {
+        font-size: 3.8vw;
+    }
+}
