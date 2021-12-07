@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Uncharted Wiki</title>
+
+    <link rel="stylesheet" href="Styles/news.css">
+</head>
+
+<body>
+    <header>
+        <div class="img"><a href="Home%20Page.html"><img src="Images/Logo.jpeg" alt="Logo" id="logo"></a></div>
+        <div class="title">
+            <h1>Uncharted <br>Wiki</h1>
+        </div>
+        <div class="login">
+            <a href="Login%20register.html">Login/Register</a>
+        </div>
+    </header>
+
+    <section class="navbar">
+        <nav>
+            <a href="Home%20Page.html">Home</a>
+            <a href="News.html" class="active">News</a>
+            <a href="404Page.html">Wiki</a>
+            <a href="404Page.html">Tutorials</a>
+        </nav>
+    </section>
+
+    <main>
+        <div class="row">
+            <div class="column">
+                <img src="Images/Villians.jpeg">
+                <a href="404Page.html">
+                    <h2>Villians</h2>
+                </a>
+            </div>
+            <div class="column">
+                <img src="Images/Heroes.jpeg">
+                <a href="404Page.html">
+                    <h2>Heroes</h2>
+                </a>
+            </div>
+            <div class="column">
+                <img src="Images/Duo.jpeg">
+                <a href="404Page.html">
+                    <h2>Unlikely Duo</h2>
+                </a>
+            </div>
+            <div class="column">
+                <img src="Images/Concept.jpeg">
+                <a href="404Page.html">
+                    <h2>Concepts</h2>
+                </a>
+            </div>
+            <div class="column">
+                <img src="Images/Design.jpg">
+                <a href="404Page.html">
+                    <h2>Designs</h2>
+                </a>
+            </div>
+            <div class="column">
+                <img src="Images/Movie.jpg">
+                <a href="404Page.html">
+                    <h2>Movie</h2>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="Home%20Page.html">Home</a>
+        <a href="404Page.html">Support</a>
+        <a href="404Page.html">About</a>
+        <a href="404Page.html">Contact Us</a>
+    </footer>
+
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm">
+        <form class="form-container">
+            <h1>Chat</h1>
+
+            <label for="msg"><b>Message</b></label>
+            <textarea disabled>Unfortunately our help service is currently closed, we hope to get back to helping you soon!</textarea>
+
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script>
+        var countDownDate = new Date("Feb 18, 2022 12:00:00").getTime();
+
+        var x = setInterval(function() {
+
+            var now = new Date().getTime();
+
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
